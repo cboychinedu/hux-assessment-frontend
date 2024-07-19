@@ -2,7 +2,9 @@
 import React, { Component, Fragment } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { AuthContext } from "./Auth/AuthContext";
-import Home from "./Components/Home/Home";
+import Home from "./Components/Register/Register";
+import Login from "./Components/Login/Login";
+import Dashboard from "./Components/Dashboard/Dashboard";
 
 // Setting the token if present 
 let tokenValue = localStorage.getItem('x-auth-token') || null; 
@@ -29,7 +31,19 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home /> } /> 
+        <Route path="/" element={<Home /> } /> 
+        <Route path="/login" element={<Login />} />
+        
+          {isLoggedIn && xAuthToken ? (
+            <>
+              <Route path='/dashboard' element={<Dashboard/>} />
+            </>
+          ): (
+            <>
+              <Route path="/" element={<Home /> } /> 
+              <Route path="/login" element={<Login />} />
+            </>
+          )}
         </Routes>
       
       </BrowserRouter>

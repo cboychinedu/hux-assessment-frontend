@@ -1,0 +1,50 @@
+.homeMainSection {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    align-items: center;
+}
+.logoImage {
+    height: 307px;
+    width: 378px;
+}
+.formDivContainer {
+    margin-top: 20px;
+    margin-left: 35px; 
+}
+.formDiv div {
+    margin-bottom: 6px;
+}
+.formDiv div label {
+    font-size: 12px;
+}
+.inputForm {
+    height: 39px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #a9a5a5;
+    outline: none;
+}
+.registerBtn {
+    height: 3em;
+    width: 9em;
+    background-color: #5d5dd9;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    color: white;
+}
+.checkboxMainDiv {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.checkBoxDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 109px;
+
+}
+.dontHaveAnAccountPara {
+    font-size: 12px;
+}

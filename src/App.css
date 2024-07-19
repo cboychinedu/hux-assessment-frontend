@@ -42,6 +42,7 @@
 .leftNav a {
     text-decoration: none;
     color: white;
+    font-size: 14px;
 }
 .mainArticle {
     display: grid;
