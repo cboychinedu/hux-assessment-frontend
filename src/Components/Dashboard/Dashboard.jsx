@@ -1,6 +1,6 @@
 // Importing the necessary modules 
 import React, { Component, Fragment } from 'react'
-import { Navbar } from 'react-bootstrap'
+import Navbar from './Navbar';
 import { AuthContext } from '../../Auth/AuthContext';
 
 

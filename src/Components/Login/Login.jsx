@@ -97,7 +97,7 @@ class Login extends Component {
 
                         // redirect the user to the dashboard page 
                         window.location.href = '/dashboard'; 
-                        window.location.reload(); 
+                        // window.location.reload(); 
                     }, 2000)
                 }
 
