@@ -1,2 +1,1 @@
-
 # hux-assessment-frontend
