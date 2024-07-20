@@ -4,6 +4,10 @@
     margin-top: 100px;
     align-items: center;
 }
+p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
 .logoImage {
     height: 307px;
     width: 378px;

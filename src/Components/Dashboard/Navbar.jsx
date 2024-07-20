@@ -47,7 +47,7 @@ const Navbar = (props) => {
                     <nav className="leftNav">
                         <Link to="/"> Home </Link>
                         <Link to="#"> About </Link>
-                        <Link onClick={logoutUser} to="#"> Logout </Link>
+                        <Link onClick={logoutUser} to="#" className="logoutBtn"> Logout </Link>
 
                     </nav>
 

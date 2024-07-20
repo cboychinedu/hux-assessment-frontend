@@ -1,0 +1,84 @@
+* {
+    margin: 0px; 
+    padding: 0px; 
+}
+.dashboardMainSectionOne {
+    margin: auto; 
+    width: 65%;
+    margin-top: 146px; 
+}
+.dashboardMainSectionTwo {
+    margin: auto; 
+    width: 65%;
+    margin-top: 85px; 
+}
+.contactsDiv {
+    display: flex;
+    width: 80%;
+    border-left: 22px solid #ff9f2d;
+    justify-content: flex-start;
+    border-bottom-left-radius: 1em;
+    color: white;
+    background-color: #38374fed;
+    margin-top: 8px;
+}
+.addContactsDiv {
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    margin-top: 8px; 
+}
+.contactsDiv div {
+    border-left: 1px solid #898989;
+    width: 10em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contactsDiv div button {
+    height: 3em;
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+}
+.contactsDiv div p {
+    font-size: 12px;
+}
+.modifyContact {
+    height: 3em;
+    padding: 6px;
+    background: #ff8e2d;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+.deleteContact {
+    background-color: rgb(195, 16, 16);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+.dashboardInputForm {
+    width: 180px;
+    height: 2rem;
+    padding-left: 1em;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: 1px solid #c3c3c3;
+}
+.saveContactBtn {
+    margin-left: 10px;
+    height: 34px;
+    width: 13em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    background: #5d5dd9;
+    font-weight: bold;
+}

@@ -3,6 +3,7 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom'; 
 import Navbar from '../Navbar';
 import "./Login.css"; 
+import Footer from '../Footer';
 import axios from 'axios';
 import { AuthContext } from '../../Auth/AuthContext';
 import { flashMessageFunction } from '../FlashMessage';
@@ -165,6 +166,10 @@ class Login extends Component {
                     </div>
 
                 </section>
+
+
+                 {/* Adding the footer */}
+                 <Footer /> 
                 
 
 

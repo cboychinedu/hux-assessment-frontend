@@ -3,6 +3,14 @@
     padding: 0px; 
     font-family: 'Poppins';
 }
+p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+.footerContainer {
+    font-size: 12px;
+    margin-top: 239px;
+}
 .mainNav {
     height: 4em;
     background-color: rgb(0, 0, 0);
@@ -27,10 +35,11 @@
     justify-content: space-between;
 }
 .searchInputForm {
-    height: 38px;
+    height: 48px;
     padding-left: 1em;
     border-radius: 5px;
     margin-right: 5px;
+    font-size: 12px;
     outline: none;
     border: 2px solid #a5a5cf;
 }
@@ -100,5 +109,23 @@
     background-color: #5d5dd9;
     border-radius: 5px;
     border: none;
+}
+.logoutBtn {
+    background: #5d5dd9;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 1px;
+    border-radius: 5px;
+}
+.mainNav {
+    height: 4em;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
 }
 

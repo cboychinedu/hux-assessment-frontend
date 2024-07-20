@@ -5,6 +5,10 @@
     margin-right: 95px;
     align-items: center;
 }
+p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
 .logoImage {
     height: 307px;
     width: 378px;
@@ -23,15 +27,17 @@
     height: 39px;
     padding-left: 10px;
     border-radius: 5px;
+    font-size: 13px;
     border: 1px solid #a9a5a5;
     outline: none;
 }
 .registerBtn {
-    height: 3em;
+    height: 2em;
     width: 9em;
     background-color: #5d5dd9;
     border-radius: 5px;
     border: none;
+    font-size: 12px;
     font-weight: bold;
     color: white;
 }

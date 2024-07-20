@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
 import axios from 'axios';
 import "./Register.css"; 
+import Footer from '../Footer';
 import { flashMessageFunction } from '../FlashMessage';
 
 // Creating the class based component 
@@ -196,6 +197,11 @@ class Register extends Component {
                     </div>
 
                 </section>
+                {/* End of the main section */}
+
+
+                {/* Footer  */}
+                <Footer /> 
                 
 
 
