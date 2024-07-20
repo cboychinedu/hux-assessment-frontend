@@ -59,13 +59,14 @@ p {
 #flashMessageDiv {
     border: 1px solid rgb(221 221 221);
     position: fixed;
-    top: 12%; 
+    top: 12%;
     left: -100%;
-    width: 18%;
+    width: fit-content;
     text-align: center;
     font-size: 12px;
     float: right;
     height: 27px;
+    padding-right: 17px;
     color: #2f2727;
     padding-top: 3px;
     margin-left: 20px;
@@ -75,7 +76,7 @@ p {
 }
 #flashMessageDiv.open {
     left: 0; 
-    width: 18%;
+    width: fit-content;
 }
 .flashMessageDiv p {
     text-align: left;
