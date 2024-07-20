@@ -33,6 +33,56 @@ class Dashboard extends Component {
         });
     }
 
+    // Creating a function for handling delete 
+    handleDeleteContact = (_contactId) => {
+        // Getting the contact id 
+        const contactId = _contactId.target.id; 
+        const firstname = document.getElementById("firstname");
+        const flashMessageDiv = document.getElementById("flashMessageDiv"); 
+        
+        // data 
+        const data = JSON.stringify({
+            "firstname": firstname.value
+        })
+
+        // Making a request to the backend to delete an item with the specified 
+        // id value 
+        const config = {
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'POST',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                "x-auth-token": localStorage.getItem('x-auth-token'),
+            }
+        }; 
+
+        // Setting the server ip address 
+        const serverIpAddress = `http://localhost:3001/contact/delete/${contactId}`; 
+
+        // Making the delete requst 
+        axios.post(serverIpAddress, data, config)
+        .then((responseData) => {
+            if (responseData.data.status === "success") {
+                // Setting the state 
+                this.setState({
+                    statusMessage: "Contact deleted...", 
+                }); 
+
+                // Opening the flash message 
+                flashMessageFunction(flashMessageDiv, firstname); 
+
+                // Delay then reload the page 
+                setTimeout(() => {
+                    window.location.reload(); 
+                }, 3000)
+            }
+        })
+
+        // 
+        console.log(contactId); 
+    }
+
     // Function to handle close menu
     closeMenu = () => {
         this.setState({
@@ -71,7 +121,7 @@ class Dashboard extends Component {
 
         // Setting the remote server ip address 
         const contactId = this.state.selectedContactId; 
-        const serverIpAddress = `http://localhost:3001/contact/${contactId}`; 
+        const serverIpAddress = `http://localhost:3001/contact/update/${contactId}`; 
 
         // Making the post request to the server ip address 
         axios.post(serverIpAddress, modifiedData, config)
@@ -166,6 +216,7 @@ class Dashboard extends Component {
                 "lastname": lastname.value, 
                 "phoneNumber": phoneNumber.value
             }); 
+
 
             // Setting the axios headers config 
             const config = {
@@ -330,7 +381,7 @@ class Dashboard extends Component {
                                 <button className="modifyContact" id={contact._id} key={contact._id} onClick={this.handleModifyContact} >Modify Contact</button>
                             </div>
                             <div> 
-                                <button className="deleteContact">Delete Contact</button>
+                                <button className="deleteContact" id={contact._id} key={contact._id} onClick={this.handleDeleteContact}>Delete Contact</button>
                             </div>
                         </div>
                     ))}

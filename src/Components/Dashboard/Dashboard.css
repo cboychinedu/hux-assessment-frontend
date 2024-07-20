@@ -45,9 +45,10 @@
 .contactsDiv div button {
     height: 3em;
     padding: 6px;
+    width: 87%;
     border-radius: 5px;
     border: none;
-    font-size: 12px;
+    font-size: 56%;
 }
 .contactsDiv div p {
     font-size: 12px;
