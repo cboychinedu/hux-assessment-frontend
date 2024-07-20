@@ -81,3 +81,42 @@ p {
     text-align: left;
     padding-left: 30px;
 }
+#menuflashMessageDiv {
+    border: 1px solid rgb(221 221 221);
+    position: fixed;
+    top: 8%;
+    left: -100%;
+    width: 18%;
+    text-align: center;
+    font-size: 12px;
+    float: right;
+    height: 27px;
+    color: #2f2727;
+    padding-top: 3px;
+    margin-left: 20px;
+    background: #f31616;
+    border-radius: 5px;
+    transition: left 0.3s ease-in;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 10px;
+}
+#menuflashMessageDiv.open {
+    left: 0;
+
+}
+
+/*{
+    /* text-align: left;
+    padding-left: -7px;
+    top: 12%; 
+    left: -100%;
+    background: #ff8e2d;
+    width: 205px;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+} */

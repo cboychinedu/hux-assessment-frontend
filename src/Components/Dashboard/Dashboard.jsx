@@ -336,8 +336,8 @@ class Dashboard extends Component {
                 {this.state.isMenuOpen && (
                     <div className={this.state.isMenuOpen ? "menuContainer open" : "menuContainer"}>
                         {/* Adding the flash message */}
-                        <div className="flashMessageDiv" id="menuflashMessageDiv">
-                            <p> {this.state.statusMessage} </p>
+                        <div className="menuflashMessageDiv" id="menuflashMessageDiv">
+                            <p className="menuPara"> {this.state.statusMessage} </p>
                         </div>
 
                         <div className='menuNavbar'>
@@ -420,7 +420,7 @@ class Dashboard extends Component {
                         </div>
                     ))}
                 </div>
-                
+
                 {/* Adding the footer */}
                 <Footer /> 
             </Fragment>
