@@ -125,9 +125,13 @@
 }
 
 .menuContainerInputForm {
+    outline: none;
     width: 279px;
     height: 41px;
+    border: 1px solid #d3caca;
     padding-left: 10px;
+    border-radius: 3px;
+    font-size: 12px;
 
 }
 .menuContainerFormDivContainer {
@@ -148,7 +152,7 @@
     background-color: #ff8e2d;
     color: white;
     font-weight: bold;
-    border: 1px solid #af7f56;
+    border: none;
     font-size: 12px;
     border-radius: 5px;
 }
