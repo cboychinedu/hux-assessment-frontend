@@ -199,12 +199,8 @@ class Register extends Component {
                 </section>
                 {/* End of the main section */}
 
-
                 {/* Footer  */}
                 <Footer /> 
-                
-
-
             </Fragment>
         )
     }

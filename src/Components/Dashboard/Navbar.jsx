@@ -60,7 +60,7 @@ const Navbar = (props) => {
                         </div>
 
                         <div>
-                            <Button className="submitButton" type="submit" onClick={searchSubmission}>Submit</Button>
+                            <Button className="submitButton" id="submitButton" type="submit" onClick={searchSubmission}>Submit</Button>
                         </div>
                     </nav>
                 </div>

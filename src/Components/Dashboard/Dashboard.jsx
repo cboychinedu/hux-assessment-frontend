@@ -77,10 +77,20 @@ class Dashboard extends Component {
                     window.location.reload(); 
                 }, 3000)
             }
+
+            // On resulted error's, execute the block of 
+            // code below 
+            else if (responseData.data.status === "error") {
+                // Setting the state 
+                this.setState({
+                    statusMessage: responseData.data.message, 
+                }); 
+
+                // Opening the flash message 
+                flashMessageFunction(flashMessageDiv, firstname); 
+            }
         })
 
-        // 
-        console.log(contactId); 
     }
 
     // Function to handle close menu
@@ -133,6 +143,7 @@ class Dashboard extends Component {
                     statusMessage: "Contact info updated..."
                 }); 
 
+                // Adding the flash message
                 menuflashMessageFunction(flashMessageDiv, firstname); 
 
                 // delay and reload the page 
@@ -140,6 +151,18 @@ class Dashboard extends Component {
                     window.location.reload();
                 }, 3000)
             } 
+
+            // On error 
+            if (responseData.data.status === "error") {
+                // Execute the block of code below on error resulted 
+                // Setting the state 
+                this.setState({
+                    statusMessage: responseData.data.message
+                }); 
+
+                // Adding the flash message 
+                menuflashMessageFunction(flashMessageDiv, firstname); 
+            }
              
         })
 
@@ -235,7 +258,6 @@ class Dashboard extends Component {
             // Making a post request to the server ip address 
             axios.post(serverIpAddress, contactsData, config)
             .then((responseData) => {
-                console.log(responseData); 
                 if (responseData.data.status === "success") {
                     // Setting the state 
                     this.setState({
@@ -250,9 +272,22 @@ class Dashboard extends Component {
                         window.location.reload(); 
                     }, 3000)
                 }
+
+                // On error execute the block of code below 
+                else if (responseData.data.status === "error") {
+                    // Setting the state 
+                    this.setState({
+                        statusMessage: responseData.data.message
+                    })
+
+                    // Opening the flash message 
+                    flashMessageFunction(flashMessageDiv, firstname); 
+
+                    // Stop the function 
+                    return; 
+                }
             })
         }
-
 
     }
 
@@ -335,7 +370,6 @@ class Dashboard extends Component {
                         </div>
                     </div>
                 )}
-
                 
 
                 {/* Adding the flash message */}
@@ -386,9 +420,7 @@ class Dashboard extends Component {
                         </div>
                     ))}
                 </div>
-
-
-
+                
                 {/* Adding the footer */}
                 <Footer /> 
             </Fragment>
