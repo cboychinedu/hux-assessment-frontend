@@ -128,4 +128,7 @@ p {
     top: 0;
     z-index: 1000; 
 }
+.footerHeaderText {
+    font-size: 12px;
+}
 

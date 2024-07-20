@@ -5,12 +5,12 @@
 .dashboardMainSectionOne {
     margin: auto; 
     width: 65%;
-    margin-top: 146px; 
+    margin-top: 70px; 
 }
 .dashboardMainSectionTwo {
     margin: auto; 
     width: 65%;
-    margin-top: 85px; 
+    margin-top: 45px; 
 }
 .contactsDiv {
     display: flex;
@@ -26,7 +26,13 @@
     display: flex;
     justify-content: flex-start;
     color: white;
-    margin-top: 8px; 
+    border: 1px solid #e7e7e7;
+    margin-top: 8px;
+    width: 48em;
+    padding: 19px;
+    padding-bottom: 38px;
+    border-radius: 5px;
+    padding-right: 29px; 
 }
 .contactsDiv div {
     border-left: 1px solid #898989;
@@ -80,5 +86,77 @@
     color: white;
     font-size: 12px;
     background: #5d5dd9;
+    margin-top: 23px;
+    font-weight: bold;;
+}
+.addContactsDiv div label {
+    color: black;
+    margin-left: 10px; 
+    font-size: 13px;
+}
+.menuContainer {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Hidden by default */
+    width: 355px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    transition: left 0.3s ease-in;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.menuContainer.open {
+    left: 0;
+    width: 335px;
+}
+
+.closeMenuBtn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.menuContainerInputForm {
+    width: 279px;
+    height: 41px;
+    padding-left: 10px;
+
+}
+.menuContainerFormDivContainer {
+    margin-top: 35px;
+}
+.menuContainerFormDiv {
+    margin-bottom: 15px;
+}
+.menuContainerFormDiv label {
+    font-size: 14px;
+}
+.menuContainerFormDiv.buttonDiv {
+    margin-top: 19px;
+}
+.modifyContactBtn {
+    width: 94%;
+    height: 44px;
+    background-color: #ff8e2d;
+    color: white;
     font-weight: bold;
+    border: 1px solid #af7f56;
+    font-size: 12px;
+    border-radius: 5px;
+}
+.menuNavbar {
+    display: flex;
+    justify-content: space-between;
+}
+.menuCloseBtn {
+    border: none;
+    background: transparent;
+    font-size: 20px;
 }

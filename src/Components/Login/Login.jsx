@@ -77,7 +77,6 @@ class Login extends Component {
             // Making a post request to the server ip address 
             axios.post(serverIpAddress, userData, config)
             .then((responseData) => {
-                console.log(responseData); 
                 if (responseData.data.status === "success") {
                     // Setting the state
                     this.setState({

@@ -41,7 +41,7 @@ const Navbar = (props) => {
                     {/* Adding the right navbar */}
                     <nav className='rightNav'>
                         <div>
-                            <input className="searchInputForm" type="search" placeholder='Search Category...' onChange={handleCategory}/> 
+                            <input className="searchInputForm" type="search" placeholder='Search Contact...' onChange={handleCategory}/> 
                         </div>
 
                         <div>

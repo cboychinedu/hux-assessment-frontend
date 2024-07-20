@@ -8,7 +8,7 @@ import "../../App.css";
 // Creating the functional based component 
 const Navbar = (props) => {
     // Setting state 
-    const [category, setCategory] = useState("")
+    const [firstname, setFirstname] = useState("")
 
     // Handle The state 
     const handleCategory = (event) => {
@@ -16,7 +16,7 @@ const Navbar = (props) => {
         const value = event.target.value.toLowerCase(); 
 
         // Setting the state 
-        setCategory(value); 
+        setFirstname(value); 
     }
 
     // Creating a function for logging out the user 
@@ -34,7 +34,9 @@ const Navbar = (props) => {
 
     // Handle submission 
     const searchSubmission = () => {
-        props.filterByCategory(category); 
+        console.log(firstname); 
+        
+        props.filterByContacts(firstname); 
     }
 
     // Return the jsx 
@@ -54,7 +56,7 @@ const Navbar = (props) => {
                     {/* Adding the right navbar */}
                     <nav className='rightNav'>
                         <div>
-                            <input className="searchInputForm" type="search" placeholder='Search Category...' onChange={handleCategory}/> 
+                            <input className="searchInputForm" type="search" placeholder='Search Contact...' onChange={handleCategory}/> 
                         </div>
 
                         <div>
