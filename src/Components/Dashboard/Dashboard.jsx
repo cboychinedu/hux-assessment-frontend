@@ -186,7 +186,7 @@ class Dashboard extends Component {
         }
 
         // Checking if the phone number is valid 
-        if (phoneNumber.value === "") {
+        else if (phoneNumber.value === "") {
             // Setting the state 
             this.setState({
                 statusMessage: "Phone number is required", 
