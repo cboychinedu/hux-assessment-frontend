@@ -46,7 +46,7 @@ p {
 }
 .leftNav {
     display: flex;
-    width: 24%;
+    width: 35%;
     justify-content: space-evenly;
 }
 .leftNav a {
@@ -54,6 +54,12 @@ p {
     color: white;
     font-size: 14px;
 }
+
+.leftNav a:hover, 
+.leftNav a:focus {
+    text-decoration: underline;
+}
+
 .mainArticle {
     display: grid;
     padding: 4em;

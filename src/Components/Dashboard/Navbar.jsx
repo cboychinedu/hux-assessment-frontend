@@ -47,8 +47,9 @@ const Navbar = (props) => {
                 {/* Adding the navbar container */}
                 <div className="navContainerDiv">
                     <nav className="leftNav">
-                        <Link to="/"> Home </Link>
+                        <Link to="/dashboard"> Home </Link>
                         <Link to="#"> About </Link>
+                        <Link to="#"> Contact Us </Link>
                         <Link onClick={logoutUser} to="#" className="logoutBtn"> Logout </Link>
 
                     </nav>
