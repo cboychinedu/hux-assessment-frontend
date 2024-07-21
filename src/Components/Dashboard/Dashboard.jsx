@@ -430,25 +430,3 @@ class Dashboard extends Component {
 
 // Exporting the dashboard 
 export default Dashboard; 
-
-
-
-{/* <div className='dashboardMainSection'> 
-    <div className="contactsDiv"> 
-        <div className="firstnameDiv">
-            <p> Alex </p>
-        </div>
-        <div className="lastnameDiv"> 
-            <p> Smith </p>
-        </div>
-        <div className="phoneNumberDiv"> 
-            <p> 0.095949393 </p>
-        </div>
-        <div>                             
-            <button className="modifyContact"> Modify Contact </button>
-        </div>
-        <div> 
-            <button className="deleteContact"> Delete Contact </button>
-        </div>
-    </div>
-</div> */}

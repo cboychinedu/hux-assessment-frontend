@@ -1,6 +1,6 @@
 // Importing the necessary modules 
-import React, { Component, Fragment } from "react";
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import React, { Component } from "react";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AuthContext } from "./Auth/AuthContext";
 import Home from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
@@ -33,6 +33,7 @@ class App extends Component {
         <Routes>
           <Route path="/" element={<Home /> } /> 
           <Route path="/login" element={<Login />} />
+          <Route path="*" element={<Login /> } /> 
           {isLoggedIn && xAuthToken ? (
             <>
               <Route path='/dashboard' element={<Dashboard/>} />
