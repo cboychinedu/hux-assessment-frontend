@@ -169,9 +169,6 @@ class Login extends Component {
 
                  {/* Adding the footer */}
                  <Footer /> 
-                
-
-
             </Fragment>
         )
     }

@@ -75,7 +75,7 @@ class Dashboard extends Component {
                 // Delay then reload the page 
                 setTimeout(() => {
                     window.location.reload(); 
-                }, 3000)
+                }, 1000)
             }
 
             // On resulted error's, execute the block of 
@@ -149,7 +149,7 @@ class Dashboard extends Component {
                 // delay and reload the page 
                 setTimeout(() => {
                     window.location.reload();
-                }, 3000)
+                }, 1000)
             } 
 
             // On error 
@@ -270,7 +270,7 @@ class Dashboard extends Component {
                     // Delay then reload the page 
                     setTimeout(() => {
                         window.location.reload(); 
-                    }, 3000)
+                    }, 1000)
                 }
 
                 // On error execute the block of code below 
