@@ -14,7 +14,7 @@
 }
 .contactsDiv {
     display: flex;
-    width: 80%;
+    width: 70%;
     border-left: 22px solid #ff9f2d;
     justify-content: flex-start;
     border-bottom-left-radius: 1em;
