@@ -165,3 +165,125 @@
     background: transparent;
     font-size: 20px;
 }
+
+
+
+
+@media (min-width: 500px) and (max-width: 640px) {
+    .contactsDiv div button {
+        height: 3em;
+        padding: 6px;
+        width: 87%;
+        border-radius: 5px;
+        border: none;
+        font-size: 33%;
+    }
+}
+@media (min-width: 641px) and (max-width: 660px) {
+    .contactsDiv div button {
+        height: 3em;
+        padding: 6px;
+        width: 87%;
+        border-radius: 5px;
+        border: none;
+        font-size: 33%;
+    }
+
+}
+@media (min-width: 661px) and (max-width: 680px) {
+    .contactsDiv div button {
+        height: 3em;
+        padding: 6px;
+        width: 87%;
+        border-radius: 5px;
+        border: none;
+        font-size: 33%;
+    }
+
+}
+@media (min-width: 681px) and (max-width: 700px) {
+    .contactsDiv div button {
+        height: 3em;
+        padding: 6px;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        font-size: 33%;
+    }
+    .addContactsDiv {
+        width: 34em;
+    }
+    .dashboardInputForm {
+        width: 104px;
+        height: 2rem;
+        font-size: 14px;
+        padding-left: 1em;
+        font-size: 10px;
+        border-radius: 5px;
+        margin-left: 10px;
+        border: 1px solid #c3c3c3; 
+    }
+    .contactsDiv {
+        width: 33em;
+    }
+    .contactsDiv div button {
+        height: 6em;
+        font-size: 15px;
+        padding: 6px;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        font-size: 33%;
+    }
+    .leftNav {
+        display: none;
+    }
+
+}
+
+@media (min-width: 701px) and (max-width: 800px) {
+    .leftNav {
+        display: none;
+    }
+    .contactsDiv {
+        width: 100%;
+    }
+}
+
+
+/* Add the media queries */
+@media (min-width: 801px) and (max-width: 946px) { 
+    .addContactsDiv {
+        display: flex;
+        justify-content: flex-start;
+        color: white;
+        border: 1px solid #e7e7e7;
+        margin-top: 8px;
+        width: 35em;
+        padding: 19px;
+        padding-bottom: 38px;
+        border-radius: 5px;
+        padding-right: 29px;
+    }
+    .dashboardInputForm {
+        width: 107px;
+        height: 2rem;
+        padding-left: 1em;
+        font-size: 12px;
+        border-radius: 5px;
+        margin-left: 10px;
+        border: 1px solid #c3c3c3;
+    }
+    .leftNav a {
+        font-size: 11px;
+    }
+    .contactsDiv {
+        width: 92%;
+    }
+    .contactsDiv div p {
+        font-size: 9px;
+    }
+
+}
+
+
