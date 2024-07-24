@@ -12,8 +12,20 @@ class Register extends Component {
 
     // Setting the state 
     state = {
+        innerWidth: null, 
         status: false, 
         statusMessage: "", 
+    }
+
+    // Component did mount 
+    componentDidMount() {
+        // Getting the inner width 
+        const innerWidth = window.innerWidth; 
+
+        // Setting the state 
+        this.setState({
+            innerWidth: innerWidth, 
+        })
     }
 
     // Creating a function for handling the register 
@@ -140,7 +152,6 @@ class Register extends Component {
 
     // Rendering the component 
     render() {
-        // return the component Filled
         return(
             <Fragment> 
                 {/* Adding the navbar */}
@@ -155,7 +166,7 @@ class Register extends Component {
                 {/* Adding the main section */}
                 <section className="homeMainSection"> 
                     <div>
-                        <img className="logoImage" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" /> 
+                        <img className="logoImage" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" alt="logoImage" /> 
                     </div>
 
                     {/* Adding the form div container  */}
