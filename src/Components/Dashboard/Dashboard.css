@@ -127,10 +127,10 @@
 .menuContainerInputForm {
     outline: none;
     width: 279px;
-    height: 41px;
+    height: 39px;
     border: 1px solid #d3caca;
     padding-left: 10px;
-    border-radius: 3px;
+    border-radius: 6px;
     font-size: 12px;
 
 }
