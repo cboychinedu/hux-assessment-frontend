@@ -17,6 +17,9 @@ class Dashboard extends Component {
 
     // Setting the state 
     state = {
+        firstname: "", 
+        lastname: "", 
+        phoneNumber: "", 
         data: [], 
         status: false, 
         statusMessage: "", 
@@ -26,11 +29,61 @@ class Dashboard extends Component {
 
     // Function to handle modify contact button click
     handleModifyContact = (_contactId) => {
+        const firstname = document.getElementById("menuFirstname");  
+        const flashMessageDiv = document.getElementById("menuflashMessageDiv"); 
+        
+        
         // Setting the state 
         this.setState({
             isMenuOpen: true,
             selectedContactId: _contactId.target.id
         });
+
+        // Sending request to the backend server to retrive the data 
+        // with the specific id address 
+        // Setting the config 
+        const config = {
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'POST',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                "x-auth-token": localStorage.getItem('x-auth-token'),
+            }
+        }; 
+
+        // Creating a dummy data for the post request
+        const dummyData = JSON.stringify({
+            "message": "This is a dummy data"
+        })
+
+        // Setting the remote server ip address 
+        const serverIpAddress = `http://localhost:3001/contact/getContacts/${_contactId.target.id}`; 
+
+        // Making a post request to the server ip address 
+        axios.post(serverIpAddress, dummyData, config)
+        .then((responseData) => {
+            // If the response data bring a success message 
+            if (responseData.data.status === "success") {
+               // Setting the state 
+               this.setState({
+                    firstname: responseData.data["dataValue"].firstname, 
+                    lastname: responseData.data['dataValue'].lastname, 
+                    phoneNumber: responseData.data['dataValue'].phoneNumber
+               }) 
+            }
+
+            else if (responseData.data.status === "error") {
+                // Setting the state 
+                this.setState({
+                    statusMessage: responseData.data.message, 
+                }); 
+
+                // Opening the flash message 
+                flashMessageFunction(flashMessageDiv, firstname); 
+            }
+            
+        })
     }
 
     // Creating a function for handling delete 
@@ -309,7 +362,7 @@ class Dashboard extends Component {
         // Setting the remote server ip address 
         const serverIpAddress = `http://localhost:3001/contact/`; 
 
-        // Making a post request to the server ip address 
+        // Making a get request to the server ip address 
         axios.get(serverIpAddress, config)
         .then((responseData) => {
             // Destructing 
@@ -353,15 +406,15 @@ class Dashboard extends Component {
                         <div className="menuContainerFormDivContainer"> 
                             <div className="menuContainerFormDiv"> 
                                 <label> Firstname </label><br/> 
-                                <input type="text" id="menuFirstname" className="menuContainerInputForm" placeholder='Firstname' /> 
+                                <input type="text" id="menuFirstname" className="menuContainerInputForm" placeholder={this.state.firstname} /> 
                             </div>
                             <div className="menuContainerFormDiv"> 
                                 <label> Lastname</label><br/> 
-                                <input type="text" id="menuLastname" className="menuContainerInputForm" placeholder='Lastname' /> 
+                                <input type="text" id="menuLastname" className="menuContainerInputForm" placeholder={this.state.lastname} /> 
                             </div>
                             <div className="menuContainerFormDiv"> 
                                 <label> Phone Number </label><br /> 
-                                <input type="tel" id="menuPhoneNumber" className='menuContainerInputForm' placeholder='Phone number' /> 
+                                <input type="tel" id="menuPhoneNumber" className='menuContainerInputForm' placeholder={this.state.phoneNumber} /> 
                             </div>
 
                             <div className="menuContainerFormDiv buttonDiv">
