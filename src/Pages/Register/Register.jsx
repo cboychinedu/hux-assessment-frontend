@@ -194,7 +194,7 @@ class Register extends Component {
                                     <p> Remember me </p>
                                 </div>
                                 <div>
-                                    <Link> Forgot Password </Link>
+                                    <Link to="/forgotPassword"> Forgot Password </Link>
                                 </div>
                             </div>
                             <div> 

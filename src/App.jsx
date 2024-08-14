@@ -2,9 +2,10 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AuthContext } from "./Auth/AuthContext";
-import Home from "./Components/Register/Register";
-import Login from "./Components/Login/Login";
-import Dashboard from "./Components/Dashboard/Dashboard";
+import Home from "./Pages/Register/Register";
+import Login from "./Pages/Login/Login";
+import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 
 // Setting the token if present 
 let tokenValue = localStorage.getItem('x-auth-token') || null; 
@@ -34,6 +35,7 @@ class App extends Component {
           <Route path="/" element={<Home /> } /> 
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<Login /> } /> 
+          <Route path="/forgotPassword" element={<ForgotPassword />} />
           {isLoggedIn && xAuthToken ? (
             <>
               <Route path='/dashboard' element={<Dashboard/>} />
