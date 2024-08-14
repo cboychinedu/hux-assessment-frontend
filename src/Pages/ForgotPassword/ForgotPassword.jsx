@@ -3,7 +3,7 @@ import React, { Fragment, useState } from 'react';
 import styles from "./ForgotPassword.module.css"; 
 import Navbar from '../Navbar';
 import axios from 'axios';
-import { flashMessageFunction } from '../ForgotPasswordFlashMessage';
+import { flashMessageFunction } from '../Components/ForgotPasswordFlashMessage';
 
 
 // Rendering the ui component 

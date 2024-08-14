@@ -1,5 +1,5 @@
 // Importing the necessary modules 
-import styles from "./ForgotPassword/ForgotPassword.module.css"; 
+import styles from "../ForgotPassword/ForgotPassword.module.css"; 
 
 
 // Creating a function for displaying the flash message 
