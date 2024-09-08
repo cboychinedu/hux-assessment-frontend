@@ -470,6 +470,12 @@ class Dashboard extends Component {
                             <div> 
                                 <button className="deleteContact" id={contact._id} key={contact._id} onClick={this.handleDeleteContact}>Delete Contact</button>
                             </div>
+                            <div> 
+                                <button className="viewContact" id="viewContact" key={contact._id} onClick={(event) => {
+                                    // Navigate the user to the view contact 
+                                    window.location.href = `/viewContact/${contact._id}`; 
+                                }}> View Contact </button>
+                            </div>
                         </div>
                     ))}
                 </div>

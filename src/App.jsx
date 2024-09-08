@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AuthContext } from "./Auth/AuthContext";
 import Home from "./Pages/Register/Register";
 import Login from "./Pages/Login/Login";
+import ViewContact from "./Pages/ViewContact/ViewContact";
 import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 
@@ -39,6 +40,8 @@ class App extends Component {
           {isLoggedIn && xAuthToken ? (
             <>
               <Route path='/dashboard' element={<Dashboard/>} />
+              <Route path="/viewContact/:contactId" element={<ViewContact />} />
+              <Route path="*" element={<Dashboard /> } /> 
             </>
           ): (
             <>
