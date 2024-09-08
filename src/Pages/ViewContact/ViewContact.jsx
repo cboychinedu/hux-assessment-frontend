@@ -3,6 +3,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import styles from "./viewContact.module.css"
 import Navbar from '../Dashboard/Navbar';
+import Footer from "../Footer"; 
 import axios from 'axios';
 
 
@@ -83,6 +84,10 @@ const ViewContact = (props) => {
                     <Link to="/dashboard" className={styles.goBack}> Go Back... </Link>
                 </div>
             </main>
+
+
+            {/* Adding the footer */}
+            <Footer /> 
 
         </Fragment>
     )
