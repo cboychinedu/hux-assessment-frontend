@@ -84,8 +84,6 @@ const ViewContact = (props) => {
                 </div>
             </main>
 
-
-          
         </Fragment>
     )
 }
